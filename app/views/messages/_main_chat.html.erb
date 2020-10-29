@@ -11,20 +11,7 @@
 
 
 <div class="messages">
-  <div class="message">
-    <div class="name_time">
-      <div class="name">YOSHIKI</div>
-      <div class="time">2020/10/27(The)20:00:00</div>
-    </div>
-    <div class="text">こんにちは</div>
-  </div>
-  <div class="message">
-    <div class="name_time">
-      <div class="name">ASAHI</div>
-      <div class="time">2020/10/27(The)20:10:30</div>
-    </div>
-    <div class="text">いえい</div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
